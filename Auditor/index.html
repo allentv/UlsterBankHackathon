@@ -40,20 +40,79 @@
 			<div class="row">
 				<div class="col-md-2 sidebar">
 					<ul class="nav nav-sidebar">
-						<li><a href="#" onclick="javascript:showOverview();"><span class="glyphicon glyphicon-home"> Overview</span> <span class="sr-only">(current)</span></a></li>
-						<li class="active"><a href="#" onclick="javascript:showReports();"><span class="glyphicon glyphicon-search"> Reports</span></a></li>
+						<li class="active"><a href="#" onclick="javascript:showOverview();"><span class="glyphicon glyphicon-home"> Overview</span></a></li>
+						<li><a href="#" onclick="javascript:showReports();"><span class="glyphicon glyphicon-search"> Reports</span></a></li>
 						<li><a href="#" onclick="javascript:showPlanning();"><span class="glyphicon glyphicon-book"> Planning</a></li>
 					</ul>
 				</div>
 				<div class="col-md-10 main">
 					<div role="tabpanel">
 						<ul class="nav nav-tabs" role="tablist" id="tabSection">
-							<li role="presentation"><a href="#overview" role="tab" data-toggle="tab">Overview</a></li>
-							<li role="presentation" class="active"><a href="#reports" role="tab" data-toggle="tab">Reports</a></li>
+							<li role="presentation" class="active"><a href="#overview" role="tab" data-toggle="tab">Overview</a></li>
+							<li role="presentation"><a href="#reports" role="tab" data-toggle="tab">Reports</a></li>
 							<li role="presentation"><a href="#planning" role="tab" data-toggle="tab">Planning</a></li>
 						</ul>
 						<div class="tab-content">
 							<div role="tabpanel" class="tab-pane fade" id="overview">
+								<div class="row">
+									<div class="col-md-4">
+										<br>
+										<canvas id="chart1" width="200" height="200">
+											<script type="text/javascript" language="javascript">
+												var canvas = document.getElementById("chart1");
+												var ctxChart1 = canvas.getContext("2d");
+												ctxChart1.fillStyle = "#0D8FDB";
+												ctxChart1.beginPath();
+												ctxChart1.arc(100,100,100,0,2*Math.PI);
+												ctxChart1.fill();
+												ctxChart1.fillStyle = "#FFFFFF";
+												ctxChart1.font = "bold 60px sans-serif";
+												ctxChart1.textAlign = "center";
+												ctxChart1.fillText("40", 100, 100);
+												ctxChart1.font = "bold 15px sans-serif";
+												ctxChart1.fillText("Users", 100, 140);
+											</script>
+										</canvas>
+									</div>
+									<div class="col-md-4">
+										<br>
+										<canvas id="chart2" width="200" height="200">
+											<script type="text/javascript" language="javascript">
+												var canvas = document.getElementById("chart2");
+												var ctxChart2 = canvas.getContext("2d");
+												ctxChart2.fillStyle = "#39DBAC";
+												ctxChart2.beginPath();
+												ctxChart2.arc(100,100,100,0,2*Math.PI);
+												ctxChart2.fill();
+												ctxChart2.fillStyle = "#FFFFFF";
+												ctxChart2.font = "bold 60px sans-serif";
+												ctxChart2.textAlign = "center";
+												ctxChart2.fillText("10", 100, 100);
+												ctxChart2.font = "bold 15px sans-serif";
+												ctxChart2.fillText("Pending Requests", 100, 140);
+											</script>
+										</canvas>
+									</div>
+									<div class="col-md-4">
+										<br>
+										<canvas id="chart3" width="200" height="200">
+											<script type="text/javascript" language="javascript">
+												var canvas = document.getElementById("chart3");
+												var ctxChart3 = canvas.getContext("2d");
+												ctxChart3.fillStyle = "#000000";
+												ctxChart3.beginPath();
+												ctxChart3.arc(100,100,100,0,2*Math.PI);
+												ctxChart3.fill();
+												ctxChart3.fillStyle = "#FFFFFF";
+												ctxChart3.font = "bold 60px sans-serif";
+												ctxChart3.textAlign = "center";
+												ctxChart3.fillText("1", 100, 100);
+												ctxChart3.font = "bold 15px sans-serif";
+												ctxChart3.fillText("Rejected Requests", 100, 140);
+											</script>
+										</canvas>
+									</div>
+								</div>
 							</div>
 							<div role="tabpanel" class="tab-pane fade in active" id="reports">
 								<br/>
@@ -66,6 +125,7 @@
 											<th>Last Name</th>
 											<th>% Completed</th>
 											<th>Status</th>
+											<th>Report</th>
 										</tr>
 									  </thead>
 									  <tbody>
@@ -75,6 +135,7 @@
 											<td>Mater</td>
 											<td>50</td>
 											<td><span class="badge badge-warning">With Bank</span></td>
+											<td>&nbsp;</td>
 										</tr>
 										<tr>
 											<td>1002</td>
@@ -82,6 +143,7 @@
 											<td>Padrig</td>
 											<td>100</td>
 											<td><span class="badge badge-success">Completed</span></td>
+											<td><a href="data/sample_copy.pdf" target="_blank">View</a></td>
 										</tr>
 										<tr>
 											<td>1003</td>
@@ -89,6 +151,7 @@
 											<td>Martin</td>
 											<td>100</td>
 											<td><span class="badge badge-error">Rejected by Bank</span></td>
+											<td>&nbsp;</td>
 										</tr>
 										<tr>
 											<td>1004</td>
@@ -96,6 +159,7 @@
 											<td>Banks</td>
 											<td>75</td>
 											<td><span class="badge badge-info">With Auditor</span></td>
+											<td>&nbsp;</td>
 										</tr>
 										<tr>
 											<td>1005</td>
@@ -103,6 +167,7 @@
 											<td>O'Shey</td>
 											<td>25</td>
 											<td><span class="badge">Request sent to User</span></td>
+											<td>&nbsp;</td>
 										</tr>
 									</tbody>
 									</table>
