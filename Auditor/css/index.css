@@ -1,1 +1,20 @@
- 
+/* Dark Red */
+.badge-error {
+  background-color: #b94a48;
+}
+/* Orange */
+.badge-warning {
+  background-color: #f89406;
+}
+/* Green */
+.badge-success {
+  background-color: #468847;
+}
+/* Dark Blue */
+.badge-info {
+  background-color: #3a87ad;
+}
+/* Black */
+.badge-inverse {
+  background-color: #333333;
+}

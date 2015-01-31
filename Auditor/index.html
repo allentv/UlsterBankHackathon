@@ -3,10 +3,12 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/bootstrap.theme.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="css/index.css">
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/Chart.min.js"></script>
 		<title>Ulster Bank Hackathon</title>
 	</head>
 	<body>
@@ -35,7 +37,83 @@
 			</div>
 		</nav>
 		<div class="container-fluid">
-			<p>This is the main page</p>
+			<div class="row">
+				<div class="col-md-2 sidebar">
+					<ul class="nav nav-sidebar">
+						<li><a href="#" onclick="javascript:showOverview();"><span class="glyphicon glyphicon-home"> Overview</span> <span class="sr-only">(current)</span></a></li>
+						<li class="active"><a href="#" onclick="javascript:showReports();"><span class="glyphicon glyphicon-search"> Reports</span></a></li>
+						<li><a href="#" onclick="javascript:showPlanning();"><span class="glyphicon glyphicon-book"> Planning</a></li>
+					</ul>
+				</div>
+				<div class="col-md-10 main">
+					<div role="tabpanel">
+						<ul class="nav nav-tabs" role="tablist" id="tabSection">
+							<li role="presentation"><a href="#overview" role="tab" data-toggle="tab">Overview</a></li>
+							<li role="presentation" class="active"><a href="#reports" role="tab" data-toggle="tab">Reports</a></li>
+							<li role="presentation"><a href="#planning" role="tab" data-toggle="tab">Planning</a></li>
+						</ul>
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane fade" id="overview">
+							</div>
+							<div role="tabpanel" class="tab-pane fade in active" id="reports">
+								<br/>
+								<div class="table-responsive">
+									<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>User ID</th>
+											<th>First Name</th>
+											<th>Last Name</th>
+											<th>% Completed</th>
+											<th>Status</th>
+										</tr>
+									  </thead>
+									  <tbody>
+										<tr>
+											<td>1001</td>
+											<td>Aileen</td>
+											<td>Mater</td>
+											<td>50</td>
+											<td><span class="badge badge-warning">With Bank</span></td>
+										</tr>
+										<tr>
+											<td>1002</td>
+											<td>John</td>
+											<td>Padrig</td>
+											<td>100</td>
+											<td><span class="badge badge-success">Completed</span></td>
+										</tr>
+										<tr>
+											<td>1003</td>
+											<td>Austin</td>
+											<td>Martin</td>
+											<td>100</td>
+											<td><span class="badge badge-error">Rejected by Bank</span></td>
+										</tr>
+										<tr>
+											<td>1004</td>
+											<td>Michelle</td>
+											<td>Banks</td>
+											<td>75</td>
+											<td><span class="badge badge-info">With Auditor</span></td>
+										</tr>
+										<tr>
+											<td>1005</td>
+											<td>Jonathan</td>
+											<td>O'Shey</td>
+											<td>25</td>
+											<td><span class="badge">Request sent to User</span></td>
+										</tr>
+									</tbody>
+									</table>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane fade active" id="planning">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
