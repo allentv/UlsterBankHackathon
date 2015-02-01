@@ -12,7 +12,7 @@
 		<title>Ulster Bank Hackathon</title>
 	</head>
 	<body>
-		<nav class="navbar navbar-default">
+		<nav class="navbar">
 			<div class="container-fluid">
 				<div class="navbar-header">
 				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -29,9 +29,9 @@
 			<div class="row">
 				<div class="col-md-2 sidebar">
 					<ul class="nav nav-sidebar">
-						<li class="active"><a href="#" onclick="javascript:showOverview();"><span class="glyphicon glyphicon-home"> Overview</span></a></li>
-						<li><a href="#" onclick="javascript:showReports();"><span class="glyphicon glyphicon-search"> Reports</span></a></li>
-						<li><a href="#" onclick="javascript:showPlanning();"><span class="glyphicon glyphicon-book"> Planning</a></li>
+						<li class="active"><a href="#" onclick="javascript:showOverview();"><span class="glyphicon glyphicon-home">&nbsp;</span>Overview</a></li>
+						<li><a href="#" onclick="javascript:showReports();"><span class="glyphicon glyphicon-search">&nbsp;</span>Reports</a></li>
+						<li><a href="#" onclick="javascript:showPlanning();"><span class="glyphicon glyphicon-book">&nbsp;</span>Planning</a></li>
 					</ul>
 				</div>
 				<div class="col-md-10 main">
@@ -218,34 +218,39 @@
 													Provide authorization for the following
 													<br /><br />
 													<span class="glyphicon glyphicon-book">
-														<input type="checkbox" id="accounts"> Bank Accounts</label>
+														<input type="checkbox" id="accounts"> 
 													</span>
+													Bank Accounts
 													<br />
 													<span class="glyphicon glyphicon-lock">
-														<input type="checkbox" id="closedAccounts"> Details of closed accounts</label>
+														<input type="checkbox" id="closedAccounts">
 													</span>
+													Details of closed accounts
 													<br />
 													<span class="glyphicon glyphicon-folder-close">
-														<input type="checkbox" id="customerAssets"> Customer Assets</label>
+														<input type="checkbox" id="customerAssets">
 													</span>
+													Customer Assets
 													<br />
 													<span class="glyphicon glyphicon-credit-card">
-														<input type="checkbox" id="contingentLiabilities"> Contingent Liabilities</label>
+														<input type="checkbox" id="contingentLiabilities">
 													</span>
+													Contingent Liabilities
 													<br />
 													<span class="glyphicon glyphicon-globe">
-														<input type="checkbox" id="foreignInvestments"> Other Investments</label>
+														<input type="checkbox" id="foreignInvestments">
 													</span>
+													Other Investments
 												</div>
 												<br />
 												<div class="row">
 													Share information in
 													&nbsp;&nbsp;
 													<span class="glyphicon glyphicon-file"><input type="radio" name="dataType" id="electronic" value="E" checked> </span>&nbsp;
-													<label for="email" class="control-label">Electronic</label>
+													Electronic
 													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 													<span class="glyphicon glyphicon-envelope"><input type="radio" name="dataType" value="P" id="paper"> </span>&nbsp;
-													<label for="email" class="control-label">Paper</label>
+													Paper
 												</div>
 												<div class="row">
 													<button type="button" class="btn btn-success" onclick="javascript:showSuccessMesage();">Send to Client</button>
