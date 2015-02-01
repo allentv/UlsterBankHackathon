@@ -44,60 +44,79 @@
 						<div class="tab-content">
 							<div role="tabpanel" class="tab-pane fade in active" id="overview">
 								<div class="row">
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<br>
-										<canvas id="chart1" width="200" height="200">
+										<canvas id="chart1" width="150" height="150">
 											<script type="text/javascript" language="javascript">
 												var canvas = document.getElementById("chart1");
 												var ctxChart1 = canvas.getContext("2d");
 												ctxChart1.fillStyle = "#0D8FDB";
 												ctxChart1.beginPath();
-												ctxChart1.arc(100,100,100,0,2*Math.PI);
+												ctxChart1.arc(75,75,75,0,2*Math.PI);
 												ctxChart1.fill();
 												ctxChart1.fillStyle = "#FFFFFF";
 												ctxChart1.font = "bold 60px sans-serif";
 												ctxChart1.textAlign = "center";
-												ctxChart1.fillText("40", 100, 100);
-												ctxChart1.font = "bold 15px sans-serif";
-												ctxChart1.fillText("Users", 100, 140);
+												ctxChart1.fillText("15", 75, 75);
+												ctxChart1.font = "bold 12px sans-serif";
+												ctxChart1.fillText("Requests Sent", 75, 120);
 											</script>
 										</canvas>
 									</div>
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<br>
-										<canvas id="chart2" width="200" height="200">
+										<canvas id="chart2" width="150" height="150">
 											<script type="text/javascript" language="javascript">
 												var canvas = document.getElementById("chart2");
 												var ctxChart2 = canvas.getContext("2d");
 												ctxChart2.fillStyle = "#39DBAC";
 												ctxChart2.beginPath();
-												ctxChart2.arc(100,100,100,0,2*Math.PI);
+												ctxChart2.arc(75,75,75,0,2*Math.PI);
 												ctxChart2.fill();
 												ctxChart2.fillStyle = "#FFFFFF";
 												ctxChart2.font = "bold 60px sans-serif";
 												ctxChart2.textAlign = "center";
-												ctxChart2.fillText("10", 100, 100);
-												ctxChart2.font = "bold 15px sans-serif";
-												ctxChart2.fillText("Pending Requests", 100, 140);
+												ctxChart2.fillText("10", 75, 75);
+												ctxChart2.font = "bold 12px sans-serif";
+												ctxChart2.fillText("Pending Requests", 75, 120);
 											</script>
 										</canvas>
 									</div>
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<br>
-										<canvas id="chart3" width="200" height="200">
+										<canvas id="chart3" width="150" height="150">
 											<script type="text/javascript" language="javascript">
 												var canvas = document.getElementById("chart3");
 												var ctxChart3 = canvas.getContext("2d");
 												ctxChart3.fillStyle = "#000000";
 												ctxChart3.beginPath();
-												ctxChart3.arc(100,100,100,0,2*Math.PI);
+												ctxChart3.arc(75,75,75,0,2*Math.PI);
 												ctxChart3.fill();
 												ctxChart3.fillStyle = "#FFFFFF";
 												ctxChart3.font = "bold 60px sans-serif";
 												ctxChart3.textAlign = "center";
-												ctxChart3.fillText("1", 100, 100);
-												ctxChart3.font = "bold 15px sans-serif";
-												ctxChart3.fillText("Rejected Requests", 100, 140);
+												ctxChart3.fillText("1", 75, 75);
+												ctxChart3.font = "bold 12px sans-serif";
+												ctxChart3.fillText("Rejected Requests", 75, 120);
+											</script>
+										</canvas>
+									</div>
+									<div class="col-md-3">
+										<br>
+										<canvas id="chart4" width="150" height="150">
+											<script type="text/javascript" language="javascript">
+												var canvas = document.getElementById("chart4");
+												var ctxChart4 = canvas.getContext("2d");
+												ctxChart4.fillStyle = "#BB2288";
+												ctxChart4.beginPath();
+												ctxChart4.arc(75,75,75,0,2*Math.PI);
+												ctxChart4.fill();
+												ctxChart4.fillStyle = "#FFFFFF";
+												ctxChart4.font = "bold 60px sans-serif";
+												ctxChart4.textAlign = "center";
+												ctxChart4.fillText("5", 75, 75);
+												ctxChart4.font = "bold 12px sans-serif";
+												ctxChart4.fillText("Awaiting Approval", 75, 120);
 											</script>
 										</canvas>
 									</div>
