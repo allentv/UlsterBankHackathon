@@ -1,14 +1,7 @@
-/*
-$(document).ready(function() {
-	$("#tabSection a").click(function (e) {
-		e.preventDefault()
-		$(this).tab("show")
-	});
-	
-	
-	
+$(document).ready(function() {	
+	$("#detailSection").hide();
+	$("#successMessageModal").hide();
 });
-*/
 
 function showOverview() {
 	$("#tabSection a[href=#overview]").tab("show");
@@ -20,4 +13,12 @@ function showReports() {
 
 function showPlanning() {
 	$("#tabSection a[href=#planning]").tab("show");
+}
+
+function showDetailSection() {
+	$("#detailSection").show();
+}
+
+function showSuccessMesage() {
+	$("#successMessageModal").modal('show');
 }
