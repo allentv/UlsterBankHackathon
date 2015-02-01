@@ -163,7 +163,115 @@
 								</div>
 							</div>
 							<div role="tabpanel" class="tab-pane fade active" id="planning">
+								<br />
+								<div class="row">
+									<label for="custID" class="control-label">Audit Client ID</label>
+									<input type="text" id="custID" value="1005">
+									<button type="button" class="btn btn-primary" onclick="javascript:showDetailSection();">Add</button>
+								</div>
+								<br />
+								<div class="row" id="detailSection">
+									<div class="panel panel-default col-md-8">
+										<br />
+										<div class="panel panel-default col-md-5">
+											<div class="panel-body">
+												<div class="well well-sm">
+													<b>Auditor Details</b>
+												</div>
+												<div class="row">
+													<label for="auditorName" class="control-label">Name &nbsp;</label>
+													<input type="text" id="auditorName" placeholder="Enter Auditor Name">
+													
+												</div>
+												<br />
+												<div class="row">
+													<label for="auditorEmail" class="control-label">E-mail&nbsp;</label>
+													<input type="text" id="auditorEmail" placeholder="Enter Auditor E-mail">
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default col-md-offset-1 col-md-5">
+											<div class="panel-body">
+												<div class="well well-sm">
+													<b>Firm Details</b>
+												</div>
+												<div class="row">
+													<label class="control-label">Partner : </label>
+													David Heath
+												</div>
+												<div class="row">
+													<label class="control-label">Name : </label>
+													MyAuditFirm
+												</div>
+												<div class="row">
+													<label class="control-label">Address : </label>
+													24-26, City Quay, Dublin 2
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default col-md-11">
+											<div class="panel-body">
+												<div class="well well-sm">
+													<b>Authorization Details</b>
+												</div>
+												<div class="row">
+													Provide authorization for the following
+													<br /><br />
+													<span class="glyphicon glyphicon-book">
+														<input type="checkbox" id="accounts"> Bank Accounts</label>
+													</span>
+													<br />
+													<span class="glyphicon glyphicon-lock">
+														<input type="checkbox" id="closedAccounts"> Details of closed accounts</label>
+													</span>
+													<br />
+													<span class="glyphicon glyphicon-folder-close">
+														<input type="checkbox" id="customerAssets"> Customer Assets</label>
+													</span>
+													<br />
+													<span class="glyphicon glyphicon-credit-card">
+														<input type="checkbox" id="contingentLiabilities"> Contingent Liabilities</label>
+													</span>
+													<br />
+													<span class="glyphicon glyphicon-globe">
+														<input type="checkbox" id="foreignInvestments"> Other Investments</label>
+													</span>
+												</div>
+												<br />
+												<div class="row">
+													Share information in
+													&nbsp;&nbsp;
+													<span class="glyphicon glyphicon-file"><input type="radio" name="dataType" id="electronic" value="E" checked> </span>&nbsp;
+													<label for="email" class="control-label">Electronic</label>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													<span class="glyphicon glyphicon-envelope"><input type="radio" name="dataType" value="P" id="paper"> </span>&nbsp;
+													<label for="email" class="control-label">Paper</label>
+												</div>
+												<div class="row">
+													<button type="button" class="btn btn-success" onclick="javascript:showSuccessMesage();">Send to Client</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="successMessageModal" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">SimplyConfirm</h4>
+						</div>
+						<div class="modal-body">
+							<p>Request sent to client 1005 successfully!</p>
+							<p>Request ID is <b>1005-24ABC</b></p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
 						</div>
 					</div>
 				</div>
